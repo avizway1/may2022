@@ -146,6 +146,23 @@ S3 Standard --> Glacier --> Delete
 S3 Standard --> Delete
 
 
+Task : Create a Life CYcle management rule to transit corrent version objects from s3 standard to Delete after 2 Days.
+Transit previous version objects to Delete after 1 Day. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CRR / SRR : 
 --> Source bucket and destination bucket must be enabled with versioning. 
 --> Existing objects will not replicate to the destination bucket.
