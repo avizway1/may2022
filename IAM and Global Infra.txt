@@ -1,0 +1,236 @@
+D: 03/05/2022
+
+AWS Global Infrastructure : 
+
+--> Region : No Technical defination for Region.. It's just a physical location / geographic location.. 
+26 regions across the globe.. 
+Mumbai : ap-south-1
+canada : ca-central-1
+nv : us-east-1
+
+22 regions : for everyone
+2 regions : china region (ninxia and Bejing)
+2 regions : Us-gov-cloud
+
+
+--> Availability Zone : Data Center or combination of multiple DCs.. Data center contains the hardware to run our worklods (Servers, Network, Databses, Storage)..
+84 AZs across the globe.. 
+Mumbai : 3 AZs.. : ap-south-1a, ap-south-1b, ap-south-1c
+
+
+--> Edge Location / CDN endpoints : Cloudfront distribution. 
+230+ edge locations across the globe.. 
+
+
+
+
+
+
+
+
+*Course Details*
+Course: AWS
+Faculty Name: Mr.Avinash
+Fees: 8000/-
+with videos:12000/-
+Course Duration: 40-45 Sessions.
+*Bank Details*
+
+Name: Naresh i Technologies
+A/C No. 50200022639833     
+Bank: HDFC
+A/C Type: Current Account
+IFSC Code: HDFC0001627
+MICR Code: 500240035
+Branch Code: 001627
+Branch:  Ameerpet
+
+Note: If you want to use Phonepe or Google Pay then follow the below steps.
+
+You can find the option Bank Transfer in Phonepe and Google pay. There you can enter our bank account number and you can transfer the amount.  Please mention your Name on the receipt and send a email once the payment is done to support@nareshit.com.
+  
+For any Queries, Feedback and Fees Related queries You can Reach us on email: support@nareshit.com 
+WhatsApp: Mr. Rajesh NIT Admin /7997997808
+
+Thanks and Regards
+Mr. Rajesh 7997997808
+
+
+Demo: 01 ( 27-04-2022)
+Video Link: shorturl.at/krsLW
+Password:  rp@H!m1v
+ 
+Demo: 02 ( 28-04-2022)
+Video Link: shorturl.at/ltxST
+Password:  58#^nB=T
+  
+Demo: 03 ( 29-04-2022)
+Video Link: shorturl.at/foxP7
+Password:  zFU$f19D
+
+
+_______________________________________________________________________________________
+
+D: 04/05/2022
+
+https://aws.amazon.com/free
+
+AWS Free Tier : 12 Months from acocunt creation
+
+IAM : Identity and access management : User managment in our AWS env
+S3 : Simple Storage Service : AWS VErsion of Google Drive
+EC2 : Elastic Compute Cloud : We can launch and run servers
+VPC : Virtual Private Cloud : Network within AWS environment
+RDS : Relational Database Service : mysql/mssql/oracle/maria/postgre/aurora
+
+IAM : Free
+S3 : 5 gb standard storage.. (2000 PUT/Upload.. 20,000 GET/Download per Month)
+EC2 : t2.micro/t3.micro : 750 Hrs/Month.. 
+RDS : db.t2.micro/db.t3.micro : 750 Hrs/Month..
+
+________
+
+Root user : Unrestricted access on AWS account : EMAIL 
+IAM User : We can limit user accesses based on his job role/work.
+--> Step 1
+Root user email address : 
+AWS account name : Sandbox/Dev/SQA/UAT/Prod
+
+Login to email used as root : Link , confirm email by clicking the link
+
+--> Step 2 : Contact Information : Personal/professional
+Name, Address, Ph number.. 				
+
+--> Step 3 : Verify the Payment information
+Provide CreditCard / Debitcard.. 2 INR 48/72 Refund back.. : Visa/MasterCard/AMEX/Disc
+--> Verify with your back. Intl transactions		
+
+--> Step 4 : Verify the Identity
+sms/Email verification : Enter pin COnfirm sms/email via link
+Ph verification : ENter Ph number.. Call me now.. ANswer the call.. XXXX Screen.. Enter the XXXX pin in the Call.. 
+
+--> Step 5 : Choose Support Plan
+
+1. Account and Billing related : Free For all aws accounts, 24x7 Support
+2. Service limit Increase : Free For all aws accounts, 24x7 Support
+3. Technical Assistance : Depends on Support plan
+
+Basic SP : Free
+Technical Assiatance : NO.. AWS Developer Forums / Re:Post.. 
+Trusted Advisor : 7 Core area checks.. 
+
+Developer SP : $29/Month
+Technical Assiatance : 12-24 Local business hours.. AWS Associate.. 
+--> Only One user can raise tickets.. Unlimited tickets.. 
+Trusted Advisor : 7 Core area checks.. 
+Case Severity : 
+General guildance : < 24 Hrs
+System impaired : <12 Hrs
+
+Business SP : $100/Month.. 
+Technical Assiatance : 24x7 support, Email, phone and chat.. AWS Engineer.. 
+--> Any user can raise tickets.. Unlimited tickets.. 
+Trusted Advisor : All checks.. 
+Case Severity : 
+General guildance : < 24 Hrs
+System impaired : <12 Hrs
+Prod impraied : < 4 hr
+Production System : < 1 Hr
+
+
+Enterprise SP : $15000/Month
+Technical Assiatance : 24x7 support, Email, phone and chat.. Sr AWS Engineer.. 
+--> Any user can raise tickets.. Unlimited tickets.. 
+--> Dedicated TAM : Technical Account Namaner
+--> Annual Operational and Architectural reviews 
+--> AWS Trainings
+Trusted Advisor : All checks.. 
+Case Severity : 
+General guildance : < 24 Hrs
+System impaired : <12 Hrs
+Prod impraied : < 4 hr
+Production System : < 1 Hr
+Business critical : < 15 Min
+
+--> Review and login to AWS account
+
+____________________________________________________________________________________
+
+D: 05/05/2022
+
+root : email : Unrestricted access (Changing support plan, CHanging payment/billing info / closing account)
+
+root :..???
+
+Least Privulages Mechanism : Provide the permissions to perform the given activities.
+
+TL : AdministratorAccess : 
+S3 : S3Admin/storageadmin : 
+ec2 : ec2admin/computeadmin : 
+
+Policy : Document that contains set of permissions on AWS env.
+--> AWS Managed - JOb Function
+--> AWS managed policy
+--> Customer managed policy
+
+__________________________________
+
+D: 06/05/2022
+
+Implicit allow : We can access the resources based on the allocated policy only. If you are trying to access another services, it wont allow. 
+
+Explicit Deny : If you deny a service once, If you allow 100 times also, deny will take effect. 
+
+Requirement : IAM user need AdministratorAccess, But i dont want to allow access on "S3 Service".
+
+IAM User with Administartor access = root user without account management permissions
+
+Policy : Document that contains set of permissions on AWS env.
+--> AWS Managed JOb Function
+--> AWS managed policy
+--> Customer managed policy
+
+We cannot delete AWS managed polocies. 
+
+==> Deny will always have highest priority. 
+YOu allow a service 100 times, but denied 1 time = DENY
+
+
+Credential report : Gives report on all IAM user and their pwd last used and pwd age.
+
+arn : Amazon Resource Name : arn:aws:iam::501170964283:user/AdminUser
+
+--> Policy Simulator
+--> Permissions boundary
+--> Inline policy
+--> Roles / Identity provider : Later
+
+
+
+AWS:
+Day-1 https://youtu.be/BVcXVClE1WE
+Day-2 https://youtu.be/BTw4kvpDuOk
+Day-3 https://youtu.be/YmMl-O4zTdY
+
+Demo: 04 ( 05-05-2022)
+Video Link: shorturl.at/aikuJ
+Password:  U#LZG79C
+
+_____________________________________________________________________________________
+
+D: 09/05/2022
+
+Policy Simulator : 
+
+Inline policy : not reusable.. Set to particular entity. 
+
+Permissions boundary : 
+
+
+Task : Create an AWS Account and make it fully activated. 
+
+Task 2 : Create an IAM User, Provide him "AdministraorAccess" and use same user throught course.
+
+Task 3 : Allow billing access to the user you created on "TASK 2".
+
+Task 4 : Create an IAM user.. Give him "S3FullAccess".. Create a Customer Managed Policy to Activate "MFA" himself.

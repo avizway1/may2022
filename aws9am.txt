@@ -1,0 +1,103 @@
+D: 27/04/2022
+
+Cloud Computing : NIST : 
+
+
+Upfront cost : 
+
+--> CAPEX : Capital Expendature : Huge for On-Premise/Traditional network.. Minimal/no capex for cloud.. 
+--> OPEX : Operational Expendature : Less Opex
+
+
+Data Centre : Building own house : Invest alot.. Upfront
+Cloud COmputing : Staying in a rented house : Monthly rent.. 
+
+Pay-as-you-go : Pay for the resource you actually used.. 
+Pay-as-you-grow : Pay for the resources/configurations you actually used.. 
+
+computing resources : RAM/Memory, Processor/CPU, Network, Application, Storage
+AWS, Azure, GCP, Alibaba cloud, Oracle cloud, Huwai cloud, Rackspace, fujitsu, virtustream....
+
+Google Drive : 15 gb free.. 
+
+Space, Server rack, Network rack, Servers, storage, OS, Application, Power connectity, UPS, Cooling..
+
+________________________________________________________________________________________
+_______________________________________________________________________________________
+
+D: 28/04/2022
+
+Deployment Models of Cloud computing : 
+
+--> Public Cloud : Open for everyone.. Anyone can create an acocunt with them.. 
+	Maintenance: Service Provider (AWS, Azure, GCP...).. Present in SP location.. 
+
+--> Private Cloud : dedicatedly available for one Organisation.. It may present in Company onpremise location or it may be in remote location..!! 
+	Maintenance : Same org may takes care about the maintenace.. Or they may give it to 3rd party org.. 
+
+--> Hybdrid Cloud : Combination of multiple cloud platform (pub+pub / pub + pri / pri + pri)
+Main : Depends on the infra.. (pub aws + pub azure)
+	--> Establishing connectivity to cloud from on-premise resources.
+	--> AWS Direct connect / Site-to-site-vpn connection
+
+--> Community Cloud : Group of orgs build the infra.. Only that group of org allowed to use the infra.. 
+Main : One of the org from Community.. 3rd party org.. 
+
+__________________________________________________________________________
+
+D: 29/04/2022
+
+Service Models of Cloud computing : 
+
+--> SaaS : Lightsail
+--> PaaS : Beanstalk
+--> IaaS : ec2
+
+
+Traditional / On-premise : 
+
+
+application
+data
+middleware / runtime
+operating system
+Server  --> IBM Servers / Towers/ blade
+Database
+storage
+network
+
+
+Server rack / network rack
+power / ups
+cooling
+physical security
+
+
+--> Shared Responsibility security model
+	--> Security OF the Cloud : Service Provider responsibility : Infra security 
+	--> Security IN the Cloud : Securing the resources you provisioned : Customer Respon
+
+____________________________________________________
+
+AWS ; Amazon Web Services : 
+
+2002 : Web Services
+2003 : Chrispinkmand and benjamin black.. Whitepapers.. SQS 
+2006 : AWS, March.. Oficially announced
+2010 : Amazon.com migrated to cloud
+
+Amazon Web services.. Microsoft Azure, Google CP.. 
+
+
+AWS Re;Invent : Aws annual conference
+
+Amazon CEO : ANdy Jessy
+AWS CEO : Adam selpesky
+
+
+
+
+_____________________________________________________________________________________
+
+
+
