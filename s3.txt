@@ -151,17 +151,9 @@ Transit previous version objects to Delete after 1 Day.
 
 
 
+_______________________________________________________________________________________
 
-
-
-
-
-
-
-
-
-
-
+D: 12/05/2022
 
 CRR / SRR : 
 --> Source bucket and destination bucket must be enabled with versioning. 
@@ -171,9 +163,58 @@ CRR / SRR :
 RTC : Replication time control : Data replicates to destination bucket with in 15 Min. (99.99% of the data) : COST US
 
 ___
-Data transfer from One region to another region cost us.
+Data transfer from One region to another region "cost us".
 Data transfer within a region won't cost us anything.
 _______________________
+
+aws s3 sync s3://source s3://target		==> 12:00AM   (task scheduler / cron job)
+_______________________
+
+
 Task : Create an S3 bucket, Upload some data, Enable versioning.. Upload same data again multiple times.. 
 
 Configure Life cycle management rule to Transit objects from S3 standard to Delete after 3 Days.. Previous versions should delete after 2 days.
+
+Task 2 : Configure Same Region Replication.. (Source bucket and target bucket should run with S3-Standard storage class only)
+
+____________________________________________
+
+S3 Static Website Hostic : 
+
+--> We need to make data public read, then only our website will deliver. 
+--> Purchased Domain name should be same as Bucket name. 
+http://learnaws.co.in.s3-website.ap-south-1.amazonaws.com  ==> learnaws.co.in
+
+http status codes :
+2XX : OK/Success
+3XX : Redirection
+4XX : Client sider error
+5XX : Server sider error
+
+
+Task : Download a template from Internet. Deliver the webiste using s3- static webiste feature.
+
+
+Slack Channel Link : https://join.slack.com/t/awswithavinash/shared_invite/zt-ozg7f9gx-lGdrFMlaOAc_BiPl4V~f4w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
