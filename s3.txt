@@ -292,8 +292,6 @@ Governance : Users with specific IAM permissions can overwrite or delete protect
 Compliance : No users can overwrite or delete protected object versions during the retention period.
 _____
 
-
-
 Performance : 
 3500 PUT Object per second per prefix
 5500 GET Object per second per prefix
@@ -314,6 +312,73 @@ Photo5
 photo6
 
 
+______________________________________________________________________________________
+
+D: 17/05/2022
+
+Pricing : https://calculator.aws/
+Free Tier : https://aws.amazon.com/free
+
+
+Storage Class Analysis : Analyze storage access patterns to help you decide when to transition objects to the appropriate storage class. 
+
+Cross-origin resource sharing (CORS)
+The CORS configuration, written in JSON, defines a way for client web applications that are loaded in one domain to interact with resources in a different domain.
+
+________________________________________________________________________________
+
+
+Performance : 
+
+--> Increase the randomness in object names.
+--> Use the prefixes. 
+
+--> 3500 PUT/Sec.. 5500 GET/Sec.. If we are directly storing all data in s3 platform.
+
+In S3, Perfix place imp role. /prefix we will get 3500 put & 5500 get operations.
+
+Req: 35,000 PUT.. --> Create 10 folders and upload data simumtaniously. 
+
+__________________
+
+FOr Put of new object, "read after write consistency". (If upload success, we can start accessing the data without any delay)
+Eventual consistenacy For overwrite an object / delete an object. (AFter delete shown as success, we may get response for the request for some milli seconds) (You have uploaded object with latest data and trying to access, you have chances to get previous data object) 
+
+__________________
+
+How to access s3 using 3rd party applications.!!
+Ans : S3 Browser, CyberDuck, WinSCP, CLoudberry explorer
+
+https://www.msp360.com/explorer/windows/amazon-s3.aspx
+
+
+Task : Try any of the s3 supported 3rd party application. 
+
+________________
+
+If we have larger file to uploade to s3 paltform, We can initiate the "Multi Part Upload". 
+
+_________________
+
+AWS Snow Family : 
+--> AWS snowcone : 8 TB
+--> AWS Snowball : 100 TB
+--> AWS Snowball edge : 40 - 100 TB
+--> AWS Snow mobile : PB scale container
+
+___
+
+AWS Direct Connect : Dedicated connection between on-premise/local environment to AWS environment. 3-4 weeks time required. We need to choose the required bandwidth. 
+--> Airtel, jio, sify
+
+Site-to-site VPN : 
+
+--> Storage classes
+--> Versioning
+--> LCR
+--> CRR/SRR
+--> Encryption
+--> Bucket policy
 
 
 
