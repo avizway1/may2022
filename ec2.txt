@@ -126,6 +126,7 @@ MAC : https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12
 start/stop : 10 days work.. 1 month.. : Stop, Start the server
 Terminate : Delete the server..
 
+________________________
 
 Task : Launch windows ec2 instance and using keypair get connect to ec2 instance.
 
@@ -143,6 +144,7 @@ FREE TIER : 750 Hrs/Month t2.micro windows instance (ondemand)
 
 _________________________________________________________________________________________
 
+D: 20/05/2022
 
 Linux OS : Amazon Linux 2 OS.. RHEL, Ubuntu, Suse, Kali
 
@@ -209,8 +211,9 @@ https://git-scm.com/download/win
 --> go to the location where we have the keypair, "Git Bash here"
 
 
-Bad Permissions error :  chmod 400 keypair.pem  (Works with GIT for Windows)
+Bad Permissions error :  chmod 400 keypairname.pem  (Works with GIT for Windows)
 
+https://stackoverflow.com/questions/8193768/unprotected-private-key-file-error-using-ssh-into-amazon-ec2-instance-aws
 ___________________________
 
 Linux Instances : Default username : ec2-user  / redhat / ubuntu
