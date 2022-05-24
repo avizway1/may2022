@@ -222,8 +222,9 @@ Task : Launch Linux ec2 instance and get connect to it.
 
 ________________________________________________________________________________________
 
+D: 21/05/2022
 
-whoami		--> tels us as what user we are working.
+whoami		--> tells us as what user we are working.
 sudo		--> allow user to execute the command with root level permissions
 sudo su	--> Switch to root user
 exit		--> Exit from root user to ec2-user
@@ -273,7 +274,8 @@ cd /var/www/html/
 
 Tool to Move the files to amazon linux ec2 instance : WinSCP
 
-___________
+_______________________________________________________________________________________________
+
 
 Whenever we launch an ec2 instance, 2 status checks will happen. 
 -> System Status check : H/w is healtlhy or not at Physical resource level. (STOP/START)
@@ -298,6 +300,8 @@ Task 2 : Launch a Linux 2 ec2 instance and make it as webserver using "Nginx".
 Task 3 : https://linuxsurvival.com/  (Complete all modules (first 2 atleast))
 _____________________________________________________________________________________
 
+
+
 EBS : Elastic Bloc Storage : Block based storage : Designed to run OS.. 
 
 root : SSD and magnetic is supported.
@@ -319,7 +323,7 @@ Magnetic : standard
 IOPS : Input and Output Operations per second
 
 root Volume : COntains OS : gp2, gp3, io1, io2 and standard/magnetic
-Additional volume : + st1, sc1
+Additional volume : all root supported + st1, sc1
 
 General Purpose SSD : (gp2 / gp3) : Low latency interactive applications, Dev and test environment..!!
 Min : 1 GiB, Max: 16 TiB... Max IOPS: 16,000 IOPS
@@ -350,7 +354,7 @@ Size : Min 125 GiB - 16 TiB.. IOPS : 250.. Throughput : 250 MB/S..
 
 Free Tier : 30 gb Gp2 and standard storage.. 
 
---> 10% of volume size (or) 5 gb.. WHichever is highest
+--> 20% of volume size (or) 5 gb.. WHichever is highest
 
 ** Need to perform OS level operations to make additional volumes available.
 --> Disk Management --> diskmgmt.msc --> choose volume --> make it online --> Initilize disk --> SImple volume --> NTFS/FAT --> Create
@@ -411,11 +415,15 @@ yum install xfsprogs
 
 _________
 
-Task : Launch an ec2 instance, Create a 1gb volume, associate it with ec2 instance.. Make 1 gb volume available at os level and write some data into it. 
+Task : Launch an ec2 instance, Create a 1gb volume, associate it with ec2 instance.. Make 1 gb volume available at os level and write some data into it. (Reboot and verify)
 
-Launch another ec2 instance in same AZ as existing ec2 instance.. Detach the volume from instance 1 and attach it to newly launched ec2 instance. You should be able to see all the data.
+Task 2 ; Increase the size of 1gb volume to 2 gb and verify with df -Th
 
-_________________________________________________________________________________________
+Task 3 ; Launch another ec2 instance in same AZ as existing ec2 instance.. Detach the volume from instance 1 and attach it to newly launched ec2 instance. You should be able to see all the data.
+
+_____________________________________________________________________________________________
+
+D: 24/05/2022
 
 Instance 1 in ap-south-1a ---> Instance 2 in ap-south-1a ==> Detach from instance 1 and attach to instance 2.. 
 
