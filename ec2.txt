@@ -575,8 +575,6 @@ Whenever we launch an ec2 instance, 2 status checks will happen.
 
 ___________________________________________________________________________________________
 
-
-
 Step 2 : Choose an Instance type 		: vCPU, Memory(RAM), Network perf
 ==> t2.micro
 
@@ -634,9 +632,17 @@ INPUT TEMPLATE:
 "At <time>, Status of your EC2 instance <instance-id> in the AWS Region <region> has changed to <state>."
 
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
+https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html#eb-cron-expressions
 
+____________
 
-Task : Make ec2 instance as webserver using "Userdata"
+Task 1 : launch an ec2 instance and configure an alarm to Stop instance if CPU utilisation is <=90% for 10 minutes.
+
+Task 2 : Configure Eventbridge to stop an ec2 instance at a particular time using Crontab. (10:30 Am)
+
+Task 3 : Configure to stop an ec2 instance after 5 minutes, trigger an email with custom email format.
+
+__________________________________________________________________________________________________________________________
 
 #!/bin/bash
 yum install httpd -y
