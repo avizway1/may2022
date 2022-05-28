@@ -742,8 +742,9 @@ Amazon linux 2 AMi ID : ami-079b5e5b3971bd10d
 	--> Create a luanch config / launch template
 	--> Configure ASG
 	
-
-	
+Task : Configure ALB with multiple Targhet groups (80, 8888, 8080)
+Task 2 ; Configure ASG with 2 as desired capacity and test it. (Create a launch configuration with amazon linux 2 ami, Use userdata)
+Amazon linux 2 AMi ID : ami-079b5e5b3971bd10d
 
 
 
