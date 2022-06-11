@@ -85,11 +85,12 @@ CIDR : Classless InterDomain Routing :
 Public Subnet : Internet facing subnet.. :
 Private Subnet : Non-Internet facing subnet.. : 
 
-How big VPC we required.?				Ans : /20 (4091 Usable IPs)
+How big VPC we required.?				Ans : /24 (256 = 256-5 = 251 Usable IPs) (192.168.0.0/24)
 How many subnets we required within the VPC..?		Ans : 2
-How many public SUbnets required within vpc..?		Ans : 1
-How many private SUbnets required within vpc.?		Ans : 1
+How many public SUbnets required within vpc..?		Ans : 1 (192.168.0.0/26)
+How many private SUbnets required within vpc.?		Ans : 1 (192.168.0.64/26)
 Are you going to create any subnets in future.?		Ans : Yes (Have some IPs for future use).
+													(192.168.0.128/26, 192.168.0.192/26)
 
 
 SUbnet : ap-south-1a : subnet1 & Subnet 2
@@ -98,12 +99,12 @@ Public Subnet : Internet facing.. : ELB, Jump/ Bastian Host..
 Private Subnet : DBs, Application, Web servers.. 
 
 Step 1 : Create a VPC.
-	VPC Name : CustomVPC		VPC CIDR : 192.168.0.0/20
+	VPC Name : CustomVPC		VPC CIDR : 192.168.0.0/24
 
 Step 2 : Create Subnets within CustomVPC. 
 
-Name : Public Subnet : ap-south-1a : 192.168.0.0/22
-Name : Private SUbnet : ap-south-1b : 192.168.4.0/22
+Name : Public Subnet : ap-south-1a : 192.168.0.0/26
+Name : Private SUbnet : ap-south-1b : 192.168.0.64/26
 
 Step 3 : Create an Internet Gateway and associate with CustomVPC.
 --> One VPC can contains one IGW.
@@ -119,12 +120,29 @@ Step 5 (Optional) : Navigate to Subnets, Choose "Public SUbnet", Actions, "Modif
 
 JUMP Server / Bastian Host : Is a Dedicated EC2 instance, Runs in CustomVPC PUblicSUbnet and can be used to connect to all the "Private Subnet" ec2 instances.
 
+___________
+
+Task : Create a VPC with 2 Subnets. (1 Public SUbnets and 1 Private Subnets)
+1 Public SUbnets (ap-south-1a)
+1 Private SUbnets (ap-south-1b)
+___
+
+Task : Create a VPC with 4 Subnets. (2 Public SUbnets and 2 Private Subnets)
+2 Public SUbnets (ap-south-1a, ap-south-1b)
+2 Private SUbnets (ap-south-1a, ap-south-1b)
+
+Task 2 : draw.io website and design this diagram.
+https://app.diagrams.net/?splash=0&libs=aws4
 
 ____________
 
 PublicRoute : We need to associate InternetGateway. 
 PrivateRoute without internet : Don't add NAT.
 PrivateRoute With Intenet : Create NAT Gateway and add NAT Gateway.
+
+
+_________________
+
 
 VPC NAT Gateway (NO FREE TIER ELIGIBILITY): Is designed to provide Internet to private Subnet resources. NAT always runs in custom VPCs public subnet. We need to generate an EIP (Elastic IP). 
 
@@ -140,19 +158,6 @@ NAT Instance : Now a days we are not using it.  It is an ec2 instance runs in cu
 --> Source/destination check must be disabled.
 
 --> Make sure your edit PrivateRoute, and add an entry with 0.0.0.0/0 via NAT Instance.
-___________
-
-Task : Create a VPC with 2 Subnets. (1 Public SUbnets and 1 Private Subnets)
-1 Public SUbnets (ap-south-1a)
-1 Private SUbnets (ap-south-1b)
-___
-
-Task : Create a VPC with 4 Subnets. (2 Public SUbnets and 2 Private Subnets)
-2 Public SUbnets (ap-south-1a, ap-south-1b)
-2 Private SUbnets (ap-south-1a, ap-south-1b)
-
-Task 2 : draw.io website and design this diagram.
-https://app.diagrams.net/?splash=0&libs=aws4
 
 ____________________________________________________________________________________
 
@@ -180,6 +185,22 @@ https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephe
 
 --> Lowest rule number will have highest permissions. 
 
+
+
+_______________________________________________________________________________________
+
+
+Endpoints : Private Links : It provides private connectivity to the resources. If we have any requirement, s3 rwquests/dynamodb req should not flow over the internet. 
+
+NAT Gateway Works with IPv4. 
+If our VPC is configured to use IPv6, Instead of NAT Gateway, We use "Egress Only Internet Gateways".
+
+
+Can we associate multiple CIDRs for our VPC.
+Yes.. 
+
+
+
 _________________
 
 
@@ -198,64 +219,6 @@ ACC ID		501170964283							501170964283
 
 8 Subnets in environment : 2 Public, 2 application (private), 2 Lambda (private), 2 Database/data (private)
 
-_______________________________________________________________________________________
-
-
-Endpoints : Private Links : It provides private connectivity to the resources. If we have any requirement, s3 rwquests/dynamodb req should not flow over the internet. 
-
-NAT Gateway Works with IPv4. 
-If our VPC is configured to use IPv6, Instead of NAT Gateway, We use "Egress Only Internet Gateways".
-
-
-Can we associate multiple CIDRs for our VPC.
-Yes.. 
-
-
-
 VPN Connectivity (openvpn): https://www.youtube.com/watch?v=JSTyjISscNg
 Transit Gateway : https://www.youtube.com/watch?v=xyLlMBHy2wc
-
-
-
-
-
-
-32 bit 
-1 & 0
-
-32-32=0 , 2^0 = 1
-32-31=1, 2^1=2
-32-30=2, 2^2=4
-32-24=8, 2^8=256
-32-16=16, 2^16=65536
-32-0=32, 2^32=4M
-
-usable IPs : /24.. 256.. as we cannot use networkid, broadcost id= 256-2 = 254 usable IPs
-usable IPs in AWS : /24.. 256.. as we cannot use networkid, broadcost id, 2 DNS Ips, 1 IP for future use = 256-5 = 251 usable IPs
-
-AWS Supports Min /28, Max: /16
-
-32-28=4, 2^4 = 16 --> 16-5 = 11 Usable IPs
-32-16=16, 2^16 = 65536 --> 65536-5 = 65531 Usable IPs
-
-req: 20 instances : 
-
-32-27=5, 2^5=32, 32-5 = 27
-
-
-00
-01
-10
-11
-
-192.168.0.0/16
-192.168.0.0/24
-192.168.100.1/32
-192.168.0.0/31
-192.168.0.0/30
-/24
-/16
-/0
-
-
 
