@@ -139,6 +139,8 @@ ___
 
 Task 1 : Create environment as mentioned in "VPC1.png"
 
+Task 2 ; Restore the Shared sample db to Launch mysql rds cluster.
+
 Task 2 : https://aws.amazon.com/getting-started/hands-on/amazon-efs-backup-and-restore-using-aws-backup/?trk=gs_card
 
 Task 3 : https://aws.amazon.com/getting-started/hands-on/amazon-ebs-backup-and-restore-using-aws-backup/?trk=gs_card
@@ -213,4 +215,26 @@ _________________
 TASK 2 : https://aws.amazon.com/getting-started/hands-on/deploy-wordpress-with-amazon-rds/
 
 Task 5 : https://aws.amazon.com/getting-started/hands-on/migrate-rdsmysql-to-auroramysql/?trk=gs_card (No free tier)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
