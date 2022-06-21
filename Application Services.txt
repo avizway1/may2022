@@ -36,7 +36,7 @@ https://www.youtube.com/watch?v=g_NTrw3UU0w
 
 _________________________________________________________
 
-
+D: 18/06/2022
 
 AWS Lambda : Serverless architecture. 
 --> Lambda performance depends on memory configurations. 
@@ -62,7 +62,6 @@ task : Am sharing some lambda functions... Deploy the lambda functions and test 
 
 ___________________________________________________________________________________
 
-
 AWS Cloudformation : IaC Infrastructure as Code : JSON/YAML : 
 --> it's free. 
 
@@ -77,7 +76,7 @@ AWS Console Recorder : Browser plugin
 
 _____________________________________________________________________________________
 
-
+D: 20/06
 
 Codecommit
 CodeDeploy
@@ -125,9 +124,12 @@ Task Defination : Task definitions specify the container information for your ap
 4. none — The task has no external network connectivity.
 
 https://ecsworkshop.com/
+https://eksworkshop.com/
 https://www.youtube.com/containersfromthecouch
 https://kodekloud.com/courses/docker-for-the-absolute-beginner/
 https://www.youtube.com/watch?v=fqMOX6JJhGo
+Terraform : https://www.youtube.com/watch?v=iRaai1IBlB0
+chef : https://learn.chef.io/courses/course-v1:chef+Chef101+Perpetual/about
 
 _________________________________
 
