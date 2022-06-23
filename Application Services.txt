@@ -137,6 +137,10 @@ AWS Organisations along with SSO:
 
 Management account : From single aws account, we can manage multiple accounts. Centralized billing option for multiple aws accounts. 
 
+identity source : SSO / Active Directory
+Permission Sets : set of permissions in aws.
+you can see/find only org joined aws accounts in SSO.
+
 ______________________________________________________________________________________
 
 
@@ -174,10 +178,11 @@ https://github.com/aws/aws-sdk-js-v3#getting-started
 
 https://www.youtube.com/watch?v=rtI26X6FJX0&list=PLneBjIzDLECkdgoinrTO7D519zgPEmcte
 _____________________________________________________________________________________
-__________________________________________________________________________________
+
 
 Gateway : https://www.youtube.com/watch?v=wmcBSHpoHhs
 CW Custom Metrics : https://www.youtube.com/watch?v=Fe2mEkWiNSA
+Gloabl Accelerator : https://www.youtube.com/watch?v=ELEW3R5vgCA
 
 AD : https://www.youtube.com/watch?v=RDlBoAHVmZs
 Ad Connector : https://www.youtube.com/watch?v=Ca259gg6SoM
@@ -212,9 +217,5 @@ Task 2 : Create a repository, Get familier with clone, push, add, commit.
 
 Task 3 : Launch an ec2 instance in Mumbai region.. Migrate this ec2 instance from mumbai region to N Virginia region using "CloudEndure Migration".
 Cloudendure migration : https://www.youtube.com/watch?v=8xf1RpPdcHs
-
-
-
-
 
 
